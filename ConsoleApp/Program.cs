@@ -10,26 +10,31 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            YieldServer ys = new YieldServer();
+            YieldClient yc = new YieldClient();
 
-            foreach (int i in ys.All())
+            foreach (int i in yc.All)
             {
                 Console.WriteLine(i);
             }
             Console.WriteLine();
 
-            foreach (int i in ys.Filter(3))
+            foreach (int i in yc.Filter)
             {
                 Console.WriteLine(i);
             }
             Console.WriteLine();
 
-            foreach (int i in ys.FilterWithStatus(3, 4))
+            foreach (int i in yc.FilterWithRetainedLocalStatus)
             {
                 Console.WriteLine(i);
             }
             Console.WriteLine();
 
+            foreach (int i in yc.Power)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine();
         }
 
     }

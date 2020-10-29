@@ -28,7 +28,7 @@ namespace ConsoleApp
             }
         }
 
-        public IEnumerable<int> FilterWithStatus(int minValue, int maxValue)
+        public IEnumerable<int> FilterWithRetainedLocalStatus(int minValue, int maxValue)
         {
             int total = 0;
             foreach (int i in List)
@@ -39,6 +39,17 @@ namespace ConsoleApp
                     yield return i;
                     yield return total;
                 }
+            }
+        }
+
+        public IEnumerable<int> Power(int number, int exponent)
+        {
+            int result = 1;
+
+            for (int i = 0; i < exponent; i++)
+            {
+                result = result * number;
+                yield return result;
             }
         }
     }
