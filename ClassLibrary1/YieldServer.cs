@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp
+namespace ClassLibrary1
 {
-    class YieldServer
+    public class YieldServer
     {
         public List<int> List { get; }
         public YieldServer()
