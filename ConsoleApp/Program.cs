@@ -10,6 +10,14 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
+            Enumerator enumerator = new Enumerator();
+            foreach (int i in enumerator.Calculate())
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine();
+
+
             YieldClient yc = new YieldClient();
 
             foreach (int i in yc.All)
